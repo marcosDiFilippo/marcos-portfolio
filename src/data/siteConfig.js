@@ -13,7 +13,7 @@ export const siteConfig = {
   availability: "Disponible para proyectos freelance",
 
   email: "marcosjesusdifilippo@gmail.com",
-  phone: "+54 9 3525 547467",
+  phone: "5493525547467",
 
   social: {
     github: "https://github.com/PLACEHOLDER",

@@ -21,7 +21,9 @@ export default function Contact() {
 
         <div className={styles.contactMethods}>
           <a
-            href={`mailto:${siteConfig.email}`}
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${siteConfig.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.contactItem}
           >
             <div className={styles.contactIcon}>
@@ -35,7 +37,7 @@ export default function Contact() {
           </a>
 
           <a
-            href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
+            href={`https://wa.me/${siteConfig.phone.replace(/\s/g, '')}`}
             className={styles.contactItem}
           >
             <div className={styles.contactIcon}>
