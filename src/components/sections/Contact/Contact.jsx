@@ -54,8 +54,8 @@ export default function Contact() {
         <div className={styles.cta}>
           <Button
             variant="primary"
-            href={`mailto:${siteConfig.email}`}
-            icon={<Mail size={16} />}
+            href={`https://wa.me/${siteConfig.phone.replace(/\s/g, '')}`}
+            icon={<Phone size={16} />}
           >
             Escribirme
           </Button>
