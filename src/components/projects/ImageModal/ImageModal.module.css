@@ -1,0 +1,153 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background-color: rgba(9, 9, 11, 0.98);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Close button */
+.closeButton {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  z-index: 10;
+  color: var(--color-white);
+  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  transition:
+    background-color var(--transition-fast),
+    opacity var(--transition-fast);
+  opacity: 0.7;
+}
+
+.closeButton:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Image container */
+.imageContainer {
+  position: relative;
+  max-width: 90vw;
+  max-height: 80vh;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  user-select: none;
+}
+
+/* Navigation buttons */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition:
+    background-color var(--transition-fast),
+    opacity var(--transition-fast);
+  cursor: pointer;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navButton:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.prevButton {
+  left: var(--space-lg);
+}
+
+.nextButton {
+  right: var(--space-lg);
+}
+
+/* Indicator dots */
+.indicators {
+  position: absolute;
+  bottom: var(--space-2xl);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: background-color var(--transition-fast);
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.dotActive {
+  background-color: var(--color-primary);
+}
+
+.dotActive:hover {
+  background-color: var(--color-primary);
+}
+
+/* Counter */
+.counter {
+  position: absolute;
+  bottom: var(--space-2xl);
+  right: var(--space-2xl);
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .navButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .prevButton {
+    left: var(--space-sm);
+  }
+
+  .nextButton {
+    right: var(--space-sm);
+  }
+
+  .counter {
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+  }
+
+  .indicators {
+    bottom: var(--space-lg);
+  }
+}

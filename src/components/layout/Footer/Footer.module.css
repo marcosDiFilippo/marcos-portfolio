@@ -1,0 +1,38 @@
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-2xl) 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-white);
+}
+
+.separator {
+  color: var(--color-border);
+}
+
+.role {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.social {
+  display: flex;
+  gap: var(--space-xs);
+}

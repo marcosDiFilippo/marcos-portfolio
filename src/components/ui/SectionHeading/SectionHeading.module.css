@@ -1,0 +1,13 @@
+.heading {
+  margin-bottom: var(--space-3xl);
+}
+
+.title {
+  margin-bottom: var(--space-sm);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 560px;
+}

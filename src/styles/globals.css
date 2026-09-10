@@ -1,0 +1,45 @@
+/* ═══════════════════════════════════════
+   Global Styles
+   Imports all foundational styles and
+   sets application-level defaults.
+   ═══════════════════════════════════════ */
+
+@import './variables.css';
+@import './reset.css';
+@import './typography.css';
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+/* Scrollbar — subtle, matching dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* Body scroll lock when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
