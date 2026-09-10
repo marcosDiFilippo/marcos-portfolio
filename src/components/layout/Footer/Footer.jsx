@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.social}>
-          <SocialLink
+          {/* <SocialLink
             href={siteConfig.social.github}
             icon={<GithubIcon />}
             label="GitHub"
@@ -33,7 +33,7 @@ export default function Footer() {
             href={`mailto:${siteConfig.email}`}
             icon={<Mail />}
             label="Email"
-          />
+          /> */}
         </div>
       </Container>
     </footer>
